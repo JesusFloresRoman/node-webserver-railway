@@ -40,6 +40,14 @@ app.get('/generic', (req, res) => {
     })
 });
 
+app.get('/salidas', (req, res) => {
+    res.render('salidas', {
+        nombre: 'Armando David Espinoza',
+        titulo: 'Curso de Node'
+    })
+
+});
+
 app.get('*', (req, res)=> {
     // res.send('404 | Page not found')
     res.sendFile(__dirname+'/public/404.html');
